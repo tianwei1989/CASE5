@@ -1,7 +1,7 @@
 #!MC 1400
 # Created by Tecplot 360 build 14.0.2.35002
 $!VarSet |MFBD| = 'C:\Users\Wei_Tian\Documents'
-$!READDATASET  '"C:\Users\Wei_Tian\Desktop\win-share\Case5\Miao 3D case C\Miao 3D case C\result.plt" '
+$!READDATASET  '.\result.plt'
   READDATAOPTION = NEW
   RESETSTYLE = YES
   INCLUDETEXT = NO
@@ -32,7 +32,7 @@ $!CONTOURLEVELS RESETTONICE
 $!REDRAWALL 
 $!EXPORTSETUP EXPORTFORMAT = PNG
 $!EXPORTSETUP IMAGEWIDTH = 600
-$!EXPORTSETUP EXPORTFNAME = 'C:\Users\Wei_Tian\Desktop\win-share\Case5\Miao 3D case C\Miao 3D case C\T.png'
+$!EXPORTSETUP EXPORTFNAME = '.\T.png'
 $!EXPORT 
   EXPORTREGION = CURRENTFRAME
 $!GLOBALCONTOUR 1  VAR = 12
@@ -40,3 +40,4 @@ $!CONTOURLEVELS RESETTONICE
   CONTOURGROUP = 1
   APPROXNUMVALUES = 15
 $!RemoveVar |MFBD|
+$!Quit
