@@ -14,6 +14,8 @@
 #include "data_structure.h"
 #include "write_data.h"
 
+#include "utility.h"
+
 FILE *file1;
 
 /******************************************************************************
@@ -39,6 +41,9 @@ int write_data(PARA_DATA *para, REAL **var, char *name)
 
 
   char filename[20];  
+
+  /*change k to degC */
+  TempRever(para, var);
   
   strcpy(filename, name);
   strcat(filename, ".plt");

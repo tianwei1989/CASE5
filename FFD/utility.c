@@ -40,5 +40,17 @@ void swap(PARA_DATA *para, REAL **var)
   }
 }
 
-
-
+/******************************************************************************
+| Reverse the k to degC
+******************************************************************************/
+void TempRever(PARA_DATA *para, REAL **var)
+{
+  int imax = para->geom->imax, jmax = para->geom->jmax; 
+  int kmax = para->geom->kmax;
+  int i, j, k;
+  int IMAX = imax+2, IJMAX = (imax+2)*(jmax+2);
+  REAL *tempC = var[TEMP];
+  FOR_ALL_CELL
+    tempC[IX(i,j,k)] -= 273.15;
+  END_FOR
+}
